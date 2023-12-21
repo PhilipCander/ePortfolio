@@ -1,57 +1,98 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <style>
-    /* CSS styles for the website */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .title {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-    .box {
-      background-color: #f2f2f2;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-    .box-title {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-    .box-link {
-      color: #0000ff;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philip's ePortfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(170, 233, 217);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+        .title {
+        text-align: center;
+        font-size: 100px;
+        margin-bottom: 80px;
+        word-spacing: 50px;
+        }
+        .box {
+            background-color: #93b3b1;
+            max-width: 400px;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            margin: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box:hover {
+            background-color: #b3d3d1;
+        }
+        .box-link {
+            color: #0000ff;
+            font-size: 30px;
+            text-shadow: #0000ff 1px 1px 0px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">Welcome to My Website</h1>
-    <div class="box">
-      <h2 class="box-title">Box 1</h2>
-      <a class="box-link" href="https://example.com">Link 1</a>
+    <div class="container">
+        <h1 class="title">Willkommen auf meinem ePortfolio</h1>
+        <div class="box-container">
+            <a class="box-link" href="https://example.com">
+                <div class="box">
+                    <p>Englisch</p>
+                </div>
+            </a>
+            <a class="box-link" href="https://example.com">
+                <div class="box">
+                    <p>Ethik</p>
+                </div>
+            </a>
+            <a class="box-link" href="https://example.com">
+                <div class="box">
+                    <p>Lernfeld 1</p>
+                </div>
+            </a>
+            <a class="box-link" href="https://example.com">
+                <div class="box">
+                    <p>Lernfeld 2</p>
+                </div>
+            </a>
+            <a class="box-link" href="https://example.com">
+                <div class="box">
+                    <p>Lernfeld 3</p>
+                </div>
+            </a>
+            <a class="box-link" href="https://example.com">
+                <div class="box">
+                    <p>Lernfeld 4</p>
+                </div>
+            </a>
+            <a class="box-link" href="https://example.com">
+                <div class="box">
+                    <p>Lernfeld 5</p>
+                </div>
+            </a>
+            
+            <!-- Add more boxes as needed -->
+        </div>
     </div>
-    <div class="box">
-      <h2 class="box-title">Box 2</h2>
-      <a class="box-link" href="https://example.com">Link 2</a>
-    </div>
-    <div class="box">
-      <h2 class="box-title">Box 3</h2>
-      <a class="box-link" href="https://example.com">Link 3</a>
-    </div>
-    <!-- Add more boxes as needed -->
-  </div>
 </body>
 </html>
