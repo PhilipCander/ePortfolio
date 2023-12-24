@@ -16,13 +16,9 @@
             font-family: 'Anonymous Pro';
             background-color: #0f052d;
             margin: 0;
-            padding: 0;
-        }
-        .header-container {
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 0 400px;
+            padding-top: 5em;
+            justify-content: center;
         }
         .blob {
             max-width: 1200px;
@@ -30,86 +26,38 @@
             margin-top: 80px;
             padding: 20px;
         }
-        .box-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .typewriter h1 {
+            color: #5fc75d;
+            font-family: monospace;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .30em solid #5fc75d; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            /*margin: 0 auto; Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+                typing 3.5s steps(30, end),
+                blink-caret .5s step-end infinite;
+}
 
-        }
-        .title {
-            color: #5fc75d;
-            text-align: center;
-            font-size: 80px;
-            margin-top: 120px;
-            margin-bottom: 80px;
-            word-spacing: 20px;
-        }
-        .box {
-            background-color: #203671;
-            max-width: 400px;
-            width: 300px;
-            height: 300px;
-            padding: 10px;
-            margin: 40px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0px 0px 5px #203671;
-        }
-        .box:hover {
-            box-shadow: 0px 0px 20px #5fc75d;
-        }
-        .box-link {
-            color: #5fc75d;
-            font-size: 30px;
-            text-decoration: none;
-        }
+                /* The typing effect */
+                @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+                }
+
+                /* The typewriter cursor effect */
+                @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: #5fc75d }
+                }
+
     </style>
 </head>
 <body>
-    <div class="header-container">
-        <h1 class="title">Willkommen auf meinem ePortfolio</h1>
+    <div class="typewriter">
+        <h1>Willkommen in meinem Portfolio</h1>
     </div>
     <div class="blob">
-        
-        <div class="box-container">
-            <a class="box-link" href="https://lainspace.io">
-                <div class="box">
-                    <p>Englisch</p>
-                </div>
-            </a>
-            <a class="box-link" href="https://example.com">
-                <div class="box">
-                    <p>Ethik</p>
-                </div>
-            </a>
-            <a class="box-link" href="https://example.com">
-                <div class="box">
-                    <p>Lernfeld 1</p>
-                </div>
-            </a>
-            <a class="box-link" href="https://example.com">
-                <div class="box">
-                    <p>Lernfeld 2</p>
-                </div>
-            </a>
-            <a class="box-link" href="https://example.com">
-                <div class="box">
-                    <p>Lernfeld 3</p>
-                </div>
-            </a>
-            <a class="box-link" href="https://example.com">
-                <div class="box">
-                    <p>Lernfeld 4</p>
-                </div>
-            </a>
-            <a class="box-link" href="https://example.com">
-                <div class="box">
-                    <p>Lernfeld 5</p>
-                </div>
-            </a>
-        </div>
     </div>
 </body>
 </html>
