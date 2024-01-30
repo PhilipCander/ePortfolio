@@ -4,20 +4,22 @@
         <meta charset="UTF-8">
         <link href='https://fonts.googleapis.com/css?family=Anonymous Pro' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Philip's ePortfolio - Lernfeld 1</title>
+        <title>Philip's ePortfolio - Lernfeld 2</title>
         <style>
             body {
                 font-family: 'Anonymous Pro';
                 background-color: #0f052d;
                 margin: 0;
                 display: flex;
+                flex-direction: column;
                 padding-top: 5em;
-                justify-content: middle;
+                justify-content: left;
+                align-items: center;
             }
             .container {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content:left;
                 align-items: center;
             }
             .title h1 {
@@ -32,7 +34,7 @@
                 margin-left: 20px; /*Gives that scrolling effect as the typing happens */
                 letter-spacing: .15em; /* Adjust as needed */
                 animation:
-                    typing 3.5s steps(30, end),
+                    typing 1.5s steps(25, end),
                     blink-caret .5s step-end infinite;
             }
             .menu h2 {
@@ -40,44 +42,57 @@
                 margin-left: 2vw;
             }
                     /* The typing effect */
-                    @keyframes typing {
-                    from { width: 0 }
-                    to { width: 100% }
-                    }
-                    /* The typewriter cursor effect */
-                    @keyframes blink-caret {
-                    from, to { border-color: transparent }
-                    50% { border-color: #5fc75d }
-                    }
+            @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+            }
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #5fc75d }
+            }
+            a {
+            color: #5fc75d;
+            position: relative;
+            text-decoration: none;
+            transition: color .4s ease-out;
+            }
+            a:hover {
+                color: #5fc75d;
+                text-decoration: none;
+            }
+        
+            a:hover::after {
+                border-color: #5fc75d;
+                right: 0;
+            }
+            a::after {
+                border-radius: 1em;
+                border-top: .1em solid #5fc75d;
+                content: "";
+                position: absolute;
+                right: 100%;
+                bottom: .14em;
+                left: 0;
+                transition: right .4s cubic-bezier(0,.5,0,1),
+                border-color .4s ease-out;
+            }
         </style>
     </head>
     <body>
-        <div class="container">
+        
             <div class="title">
                 <h1>Lernfeld 1</h1>
             </div>
             <div class="menu">
-                <h2>Menü</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="lernfeld1.html">Lernfeld 1</a></li>
-                    <li><a href="lernfeld2.html">Lernfeld 2</a></li>
-                    <li><a href="lernfeld3.html">Lernfeld 3</a></li>
-                    <li><a href="lernfeld4.html">Lernfeld 4</a></li>
-                    <li><a href="lernfeld5.html">Lernfeld 5</a></li>
-                    <li><a href="lernfeld6.html">Lernfeld 6</a></li>
-                    <li><a href="lernfeld7.html">Lernfeld 7</a></li>
-                    <li><a href="lernfeld8.html">Lernfeld 8</a></li>
-                    <li><a href="lernfeld9.html">Lernfeld 9</a></li>
-                    <li><a href="lernfeld10.html">Lernfeld 10</a></li>
-                    <li><a href="lernfeld11.html">Lernfeld 11</a></li>
-                    <li><a href="lernfeld12.html">Lernfeld 12</a></li>
-                    <li><a href="lernfeld13.html">Lernfeld 13</a></li>
-                    <li><a href="lernfeld14.html">Lernfeld 14</a></li>
-                    <li><a href="lernfeld15.html">Lernfeld 15</a></li>
-                    <li><a href="lernfeld16.html">Lernfeld 16</a></li>
-                    <li><a href="lernfeld17.html">Lernfeld 17</a></li>
-                    <li><a href="lernfeld18.html">Lernfeld 18</a></li>
-                    <li><a href="lernfeld19.html">Lernfeld
+                <h2><a href="index.html">>Home</a></h2>
+                <h2><a href="lernfeld2.html">>Lernfeld 2</a></h2>
+                <h2><a href="lernfeld3.html">>Lernfeld 3</a></h2>
+                <h2><a href="lernfeld4.html">>Lernfeld 4</a></h2>
+                <h2><a href="lernfeld5.html">>Lernfeld 5</a></h2>
+            </div>
+            
+
+            
     </body>
 </html>
