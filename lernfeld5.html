@@ -23,11 +23,6 @@
                 
                 font-size: medium;
             }
-            .verse h2{
-                color: #5fc75d;
-                margin: 10%;
-                font-size: medium;
-            }
             .sticky{
                 position: sticky;
                 position: -webkit-sticky;
@@ -42,14 +37,22 @@
                     display: none;
                 }
             }
-            .container {
+            .container2{
                 display: flex;
                 flex-direction: column;
                 justify-content:left;
                 align-items: center;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content:left;
                 max-width: 70%;
                 margin: auto;
                 margin-bottom: 30px;
+                color: #5fc75d;
+                border: #5fc75d 3px solid;
+                padding: 10px;
             }
             .spacer1{
                 height: 10vw;
@@ -57,6 +60,10 @@
             }
             .spacer2{
                 height: 5vw;
+                width: max-content;
+            }
+            .spacer3{
+                height: 2vw;
                 width: max-content;
             }
             .title h1 {
@@ -114,7 +121,7 @@
         </style>
     </head>
     <body>
-        <div class="container">
+        <div class="container2">
             <div class="title">
                 <h1>Lernfeld 5</h1>
             </div>
@@ -129,8 +136,7 @@
         </div>
         <div class="spacer1"></div>
         <div class="sticky">
-            <h2>Inhaltsverzeichnis</h2>
-            <p><a href="#test">Test 1</a></p>
+            <p><a href="#thermostat">Projekt - Thermostat</a></p>
             <p><a href="#test2">Test 2</a></p>
             <p>Test 3</p>
             <p>Test 4</p>
@@ -138,29 +144,95 @@
         </div>
         <div class="spacer1"></div>
         <div class="container">
-            <div class="verse">
-                <center>
-                    <h2>
-                        <a href="#test">Huh hier steht ja noch nichts ???</a>
-                    <h2>
-                </center>
+            <center>
+                <h1 id="thermostat">
+                    Projekt - Thermostat
                 <h1>
-                    <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not
-                    </a>
-                </h1>
-                <p id="test">123 Test</p>
-                <div class="spacer1"></div>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type 
-                    specimen book. It has survived not
-                </p>
-                <p id="test2">Test 2</p>
-            </div>
+            </center>
+            <div class="spacer1"></div>
+            <h2>
+                Projektbeschreibung:
+            </h2>
+            <p>
+                Die Aufgabe besteht darin eine Klimabox mithilfe von Microcontroller Arduino zu programmieren.
+                 Dabei sollen die Parameter “Temperatur” und “Luftfeuchtigkeit” als Prototyp für ein 
+                 Kundengespräch simuliert werden.
+            </p>
+            <p>
+                Diese elektronischen Komponenten stehen zur Verfügung:
+            </p>
+            <ul>
+                <li>1 x Arduino Uno</li>
+                <li>1 x Sensor DHT 11/22</li>
+                <li>4 x LED (gelb, blau, grün, rot)</li>
+                <li>2 x Taster</li>
+                <li>1 x Drehpegler (Potentiometer 10KOhm, KEIN Inkrementalgeber)</li>
+                <li>1 x LCD1602 (zweizeiliges Display, an I2C-Bus angeschlossen)</li>
+            </ul>
+            <p>Der Sensor DHT11/22 kann die Messwerte (Temperatur, Luftfeuchtigkeit) erfassen, 
+                in Variablen speichern und auf einem zweiten Display (LCD1602) anzeigen.
+            </p>
+            <img src="img/lf5-thermostat-uebersicht.png" alt="Thermostat Uebersicht" style="margin: auto;">
+            <div class="spacer2"></div>
+            <p>
+                Mit drei LED's soll ein bestimmter Messbereich visualisiert werden. 
+                Als Messwert wird hier die Temperatur gewählt.
+            </p>
+            <ul>
+                <li>Die blaue LED signalisiert, wenn der Messbereich unterschritteen wird. 
+                    Die rote LED signalisiert, wenn ein Messbereich überschritten wird. 
+                    Die grüne LED zeigt an, wenn sich der Messwert im vorgegebenen Messbereich befindet.
+                </li>
+                <li>
+                    Der min-Wert vom Messbereich ist im Quellcode fest vorzugeben. 
+                    Der max-Wert vom Messbereich wird mit dem Drehpotentiometer zur Laufzeit des Programms eingestellt.
+                    Wird der min-Wert von 20°C unterschritten, wird dies mit der blauen LED signalisiert. Wird der max-Wert von 24°C überschritten, wird dies mit der roten LED signalisiert.
+                    Der max-Wert kann in Schritten mit dem Drehpotentiometer nach unten bzw. oben verändern werden, er darf den min-Wert nicht unterschreiten.
+                </li>
+                <li>
+                    Da es zu Testzwecken die Umgebungstemperatur der Hardware nicht beliebig verändert werden kann, 
+                    erfolgt ein Unit-Test auf der Simulationsplattform Wokwi.
+                </li>
+                <li>
+                    Wir müssen darauf achten, dass der Quellcode der Simulation auch auf dem Arduino Uno R1 laufen muss. 
+                    Lediglich Der Temperatursensor DHT muss angepasst werden. 
+                    Simulation = DHT22 Arduino Shield = DHT11
+                </li>
+                <li>
+                    LCD1602-Modul soll die aktuelle Temperatur und Luftfeuchtigkeit anzeigen lassen
+                </li>
+                <li>
+                    Optional: Es sollte überprüft werden, ob die aktuellen Werte entweder im seriellen Monitor der IDE 
+                    oder in einer Excel- oder CSV-Datei übertragen werden können.
+                </li>
+            </ul>
+            <div class="spacer2"></div>
+            <h2>
+                Funktionsbeschreibung:
+            </h2>
+            <p>
+                ... kommt noch ...
+            </p>
+            <div class="spacer2"></div>
+            <h2>
+                Modell (Schaltplan):
+            </h2>
+            <div class="spacer3"></div>
+            <img src="img/lf5-thermostat-schaltungplan.png" alt="Schaltplan" style="margin: auto;">
+            <h2>
+                Quellcode:
+            </h2>
+            <p>
+                ... kommt noch ...
+            </p>
+            <div class="spacer2"></div>
+            <h2>
+                Quellcodebeschreibung:
+            </h2>
+            <p>
+                ... kommt noch ...
+            </p>
+            <div class="spacer1"></div>
         </div>
             
     </body>
