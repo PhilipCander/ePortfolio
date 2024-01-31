@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Philip's ePortfolio - Lernfeld 2</title>
         <style>
+            html {
+                scroll-behavior: smooth;
+            }
             body {
                 font-family: 'Anonymous Pro';
                 background-color: #0f052d;
@@ -14,18 +17,39 @@
                 flex-direction: column;
                 padding-top: 5em;
                 justify-content: left;
-                align-items: center;
+            }
+            p{
+                color: #5fc75d;
+                
+                font-size: medium;
             }
             .verse h2{
                 color: #5fc75d;
                 margin: 10%;
                 font-size: medium;
             }
+            .sticky{
+                position: sticky;
+                position: -webkit-sticky;
+                width: 10vw;
+                height: fit-content;
+                top: 5vw;  
+                left: 1vw;
+                border: 3px solid #5fc75d;
+            }
+            @media(max-width: 800px){
+                .sticky{
+                    display: none;
+                }
+            }
             .container {
                 display: flex;
                 flex-direction: column;
                 justify-content:left;
                 align-items: center;
+                max-width: 70%;
+                margin: auto;
+                margin-bottom: 30px;
             }
             .spacer1{
                 height: 10vw;
@@ -37,7 +61,7 @@
             }
             .title h1 {
                 color: #5fc75d;
-                font-size: clamp(2vw, 5vw, 100%);
+                font-size: clamp(2vw, 5vw, 3rem);
                 padding-left: 10px;
                 max-width: 100%;
                 overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -49,7 +73,7 @@
             }
             .menu h2 {
                 color: #5fc75d;
-                margin-left: 2vw;
+                margin-left: auto;
             }
                     /* The typing effect */
             @keyframes typing {
@@ -90,7 +114,7 @@
         </style>
     </head>
     <body>
-        
+        <div class="container">
             <div class="title">
                 <h1>Lernfeld 5</h1>
             </div>
@@ -102,15 +126,42 @@
                 <h2><a href="lernfeld3.html">>Lernfeld 3</a></h2>
                 <h2><a href="lernfeld4.html">>Lernfeld 4</a></h2>
             </div>
-            <div class="spacer1"></div>
-            <div class="spacer1"></div>
-                <div class="verse">
+        </div>
+        <div class="spacer1"></div>
+        <div class="sticky">
+            <h2>Inhaltsverzeichnis</h2>
+            <p><a href="#test">Test 1</a></p>
+            <p><a href="#test2">Test 2</a></p>
+            <p>Test 3</p>
+            <p>Test 4</p>
+            <p>Test 5</p>
+        </div>
+        <div class="spacer1"></div>
+        <div class="container">
+            <div class="verse">
                 <center>
-                    <h2>Huh hier steht ja noch nichts ???</h2>
+                    <h2>
+                        <a href="#test">Huh hier steht ja noch nichts ???</a>
+                    <h2>
                 </center>
+                <h1>
+                    <a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not
+                    </a>
+                </h1>
+                <p id="test">123 Test</p>
                 <div class="spacer1"></div>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type 
+                    specimen book. It has survived not
+                </p>
+                <p id="test2">Test 2</p>
             </div>
-
+        </div>
             
     </body>
 </html>

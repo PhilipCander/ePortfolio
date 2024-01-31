@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Philip's ePortfolio</title>
         <style>
+            html {
+                scroll-behavior: smooth;
+            }
             body {
                 font-family: 'Anonymous Pro';
                 background-color: #0f052d;
@@ -15,6 +18,11 @@
                 padding-top: 5em;
                 justify-content: left;
                 align-items: center;
+            }
+            p{
+                color: #5fc75d;
+                margin: 20%;
+                font-size: medium;
             }
             .container {
                 display: flex;
@@ -32,8 +40,7 @@
             }
             .title h1 {
                 color: #5fc75d;
-                font-size: clamp(2vw, 4vw, 100%);
-                max-width: 100%;
+                font-size: clamp(2vw, 4vw, 3rem);
                 overflow: hidden; /* Ensures the content is not revealed until the animation */
                 border-right: .30em solid #5fc75d; /* The typwriter cursor */
                 white-space: nowrap; /* Keeps the content on a single line */
@@ -96,5 +103,7 @@
                 <h2> <a href="lernfeld4.html">>Lernfeld 4</h2>
                 <h2> <a href="lernfeld5.html">>Lernfeld 5</h2>
             </div>
+            <div class="spacer1"></div>
+            <p><a href="">Hier geht es zu meinem Github...</a></p>
     </body>
 </html>
