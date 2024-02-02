@@ -60,6 +60,7 @@ h2{
     flex-direction: column;
     justify-content:left;
     max-width: 50%;
+    min-width: 350px;
     margin: auto;
     margin-bottom: 30px;
     color: #5fc75d;
