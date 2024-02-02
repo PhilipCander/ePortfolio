@@ -4,94 +4,12 @@
         <meta charset="UTF-8">
         <link href='https://fonts.googleapis.com/css?family=Anonymous Pro' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
         <title>Philip's ePortfolio</title>
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
-            body {
-                font-family: 'Anonymous Pro';
-                background-color: #0f052d;
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                padding-top: 5em;
-                justify-content: left;
-                align-items: center;
-            }
-            p{
-                color: #5fc75d;
-                margin: 20%;
-                font-size: medium;
-            }
-            .container {
-                display: flex;
-                flex-direction: column;
-                justify-content:left;
-                align-items: center;
-            }
-            .spacer1{
-                height: 10vw;
-                width: max-content;
-            }
-            .spacer2{
-                height: 5vw;
-                width: max-content;
-            }
-            .title h1 {
-                color: #5fc75d;
-                font-size: clamp(2vw, 4vw, 3rem);
-                overflow: hidden; /* Ensures the content is not revealed until the animation */
-                border-right: .30em solid #5fc75d; /* The typwriter cursor */
-                white-space: nowrap; /* Keeps the content on a single line */
-                letter-spacing: .15em; /* Adjust as needed */
-                animation:
-                    typing 3.5s steps(25, end),
-                    blink-caret .5s step-end infinite;
-            }
-            .menu h2 {
-                color: #5fc75d;
-                margin-left: 2vw;
-            }
-                    /* The typing effect */
-            @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-            }
-            /* The typewriter cursor effect */
-            @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #5fc75d }
-            }
-            a {
-            color: #5fc75d;
-            position: relative;
-            text-decoration: none;
-            transition: color .4s ease-out;
-            }
-            a:hover {
-                color: #5fc75d;
-                text-decoration: none;
-            }
         
-            a:hover::after {
-                border-color: #5fc75d;
-                right: 0;
-            }
-            a::after {
-                border-radius: 1em;
-                border-top: .1em solid #5fc75d;
-                content: "";
-                position: absolute;
-                right: 100%;
-                bottom: .14em;
-                left: 0;
-                transition: right .4s cubic-bezier(0,.5,0,1),
-                border-color .4s ease-out;
-            }
-        </style>
     </head>
     <body>
+        <div class="container2">
             <div class="title">
                 <h1>Willkommen in meinem Portfolio</h1>
             </div>
@@ -105,5 +23,6 @@
             </div>
             <div class="spacer1"></div>
             <p><a href="">Hier geht es zu meinem Github...</a></p>
+        </div>
     </body>
 </html>
