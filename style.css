@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Anonymous Pro';
+    src: url(AnonymousPro-1_002/Anonymous\ Pro.ttf);
+}
 html {
     scroll-behavior: smooth;
 }
