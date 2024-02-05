@@ -12,7 +12,6 @@ body {
 }
 p{
     color: #5fc75d;
-    
     font-size: medium;
 }
 img{
@@ -22,17 +21,6 @@ img{
 }
 h2{
     color: #5fc75d;
-}
-.popup{
-    position: fixed;
-    left:50%;
-    top:50%;
-    z-index:100;
-    padding: 5px 5px;
-    border: rgb(0, 217, 255) 3px solid;
-}
-.crazy{
-    position: absolute;
 }
 .sticky{
     position: sticky;
@@ -95,12 +83,10 @@ h2{
     color: #5fc75d;
     margin-left: auto;
 }
-        /* The typing effect */
 @keyframes typing {
 from { width: 0 }
 to { width: 100% }
 }
-/* The typewriter cursor effect */
 @keyframes blink-caret {
 from, to { border-color: transparent }
 50% { border-color: #5fc75d }
