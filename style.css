@@ -84,9 +84,9 @@ h2{
     font-size: clamp(2vw, 5vw, 3rem);
     padding-left: 10px;
     max-width: 100%;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .30em solid #5fc75d; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
+    overflow: hidden;
+    border-right: .30em solid #5fc75d; 
+    white-space: nowrap; 
     animation:
         typing 1.5s steps(25, end),
         blink-caret .5s step-end infinite;
