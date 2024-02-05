@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="de" data-bs-theme="dark">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Johannes Kirchner">
+  <meta name="revisit-after" content="7 days">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+
+  
+  <script defer src="/js/bootstrap.min.js"></script>
+
+  <title>
+    Lernfeld 5
+  </title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mt-2 mb-2 container">
+  <nav
+  class="rounded navbar navbar-expand-lg bg-body-tertiary"
+>
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand" aria-label="Link zur Startseite">
+    Home
+    </a>
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#Hauptnavigation" 
+      aria-controls="Hauptnavigation" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="Hauptnavigation">
+      <ul class="navbar-nav" role="menubar">
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF1">Lernfeld 1</a>
+        </li>
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF2">Lernfeld 2</a>
+        </li>
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF3">Lernfeld 3</a>
+        </li>
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF4">Lernfeld 4</a>
+        </li>
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link active" href="/LF5">Lernfeld 5</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+    <div class="container mt-5 mb-5 text-center typewriter">
+
+      
+<h1>Lernfeld 5</h1>
+
+<h2>Projekt - Thermostat</h2>
+<h3>Projektbeschreibung</h3>
+<section class="text-start">
+  <p>
+    Die Aufgabe besteht darin eine Klimabox mithilfe von Microcontroller Arduino
+    zu programmieren. Dabei sollen die Parameter “Temperatur” und
+    “Luftfeuchtigkeit” als Prototyp für ein Kundengespräch simuliert werden.
+  </p>
+
+  <p>Diese elektronischen Komponenten stehen zur Verfügung:</p>
+  <ul>
+    <li>1 x Arduino Uno</li>
+    <li>1 x Sensor DHT 11/22</li>
+    <li>4 x LED (gelb, blau, grün, rot)</li>
+    <li>2 x Taster</li>
+    <li>1 x Drehpegler (Potentiometer 10KOhm, KEIN Inkrementalgeber)</li>
+    <li>1 x LCD1602 (zweizeiliges Display, an I2C-Bus angeschlossen)</li>
+  </ul>
+
+  <div class="row">
+    <div class="col col-6">
+      <img
+        class="img img-fluid rounded"
+        src="/img/lf5/lf5-thermostat-uebersicht.png"
+      />
+    </div>
+    <div class="col col-6">
+      <p>
+        Der Sensor DHT11/22 kann die Messwerte (Temperatur, Luftfeuchtigkeit)
+        erfassen, in Variablen speichern und auf einem zweiten Display (LCD1602)
+        anzeigen.
+      </p>
+      <p>
+        Mit drei LED's soll ein bestimmter Messbereich visualisiert werden. Als
+        Messwert wird hier die Temperatur gewählt.
+      </p>
+    </div>
+  </div>
+  <ul>
+    <li>
+      Die blaue LED signalisiert, wenn der Messbereich unterschritteen wird. Die
+      rote LED signalisiert, wenn ein Messbereich überschritten wird. Die grüne
+      LED zeigt an, wenn sich der Messwert im vorgegebenen Messbereich befindet.
+    </li>
+    <li>
+      Der min-Wert vom Messbereich ist im Quellcode fest vorzugeben. Der
+      max-Wert vom Messbereich wird mit dem Drehpotentiometer zur Laufzeit des
+      Programms eingestellt. Wird der min-Wert von 20°C unterschritten, wird
+      dies mit der blauen LED signalisiert. Wird der max-Wert von 24°C
+      überschritten, wird dies mit der roten LED signalisiert. Der max-Wert kann
+      in Schritten mit dem Drehpotentiometer nach unten bzw. oben verändern
+      werden, er darf den min-Wert nicht unterschreiten.
+    </li>
+    <li>
+      Da es zu Testzwecken die Umgebungstemperatur der Hardware nicht beliebig
+      verändert werden kann, erfolgt ein Unit-Test auf der Simulationsplattform
+      Wokwi.
+    </li>
+    <li>
+      Wir müssen darauf achten, dass der Quellcode der Simulation auch auf dem
+      Arduino Uno R1 laufen muss. Lediglich Der Temperatursensor DHT muss
+      angepasst werden. Simulation = DHT22 Arduino Shield = DHT11
+    </li>
+    <li>
+      LCD1602-Modul soll die aktuelle Temperatur und Luftfeuchtigkeit anzeigen
+      lassen
+    </li>
+    <li>
+      Optional: Es sollte überprüft werden, ob die aktuellen Werte entweder im
+      seriellen Monitor der IDE oder in einer Excel- oder CSV-Datei übertragen
+      werden können.
+    </li>
+  </ul>
+</section>
+
+<h3>Funktionsbeschreibung:</h3>
+
+<section class="text-start">
+  <p>NYI</p>
+</section>
+
+<h3>Modell (Schaltplan):</h3>
+<img
+  class="img img-fluid rounded"
+  src="/img/lf5/lf5-thermostat-schaltungplan.png"
+/>
+
+<h3>Quellcode:</h3>
+<section class="text-start">
+  <pre>
+<code class="language-python" > 
+fn main()
+  print("Hello World")
+  return 0
+</code>
+</pre>
+</section>
+
+<h3>Quellcodebeschreibung:</h3>
+<section class="text-start">
+  <p>NYI</p>
+</section>
+
+    </div>
+  </div>
+  <div class="container bg-body-tertiary rounded pt-4">
+  <p class="text-center ">Copyright © 2023 - <span id="date"></span> PEETAH. All rights reserved.</p>
+    <div class="row pb-4">
+      <div class="col text-center">
+        <a href="/Impressum" class="custom-link">Impressum</a>  
+      </div>
+      <div class="col text-center">
+        <a href="/Datenschutz" class="custom-link">Datenschutz</a>  
+      </div>
+      <div class="col text-center">
+        <a href="https://github.com/philipcander" target="_blank" class="custom-link"><i class="fa-brands fa-github fa-2xl"></i></a>
+      </div>
+    </div>
+</div>
+
+<script>
+ function Datum() {
+    const div = document.querySelector("#date"),
+      year = new Date()
+        .getFullYear()
+        .toString();
+    div.innerHTML = year
+  }
+  Datum();
+</script>
+</body>
+
+</html>

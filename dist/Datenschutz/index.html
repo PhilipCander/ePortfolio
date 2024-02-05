@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="de" data-bs-theme="dark">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Johannes Kirchner">
+  <meta name="revisit-after" content="7 days">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+
+  
+  <script defer src="/js/bootstrap.min.js"></script>
+
+  <title>
+    Datenschutz
+  </title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="mt-2 mb-2 container">
+  <nav
+  class="rounded navbar navbar-expand-lg bg-body-tertiary"
+>
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand" aria-label="Link zur Startseite">
+    Home
+    </a>
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#Hauptnavigation" 
+      aria-controls="Hauptnavigation" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="Hauptnavigation">
+      <ul class="navbar-nav" role="menubar">
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF1">Lernfeld 1</a>
+        </li>
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF2">Lernfeld 2</a>
+        </li>
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF3">Lernfeld 3</a>
+        </li>
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF4">Lernfeld 4</a>
+        </li>
+        <li class="nav-item" role="menuitem">
+          <a class="underline-hover nav-link " href="/LF5">Lernfeld 5</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+    <div class="container mt-5 mb-5 text-center typewriter">
+
+      
+<h1>NYI</h1>
+
+    </div>
+  </div>
+  <div class="container bg-body-tertiary rounded pt-4">
+  <p class="text-center ">Copyright © 2023 - <span id="date"></span> PEETAH. All rights reserved.</p>
+    <div class="row pb-4">
+      <div class="col text-center">
+        <a href="/Impressum" class="custom-link">Impressum</a>  
+      </div>
+      <div class="col text-center">
+        <a href="/Datenschutz" class="custom-link">Datenschutz</a>  
+      </div>
+      <div class="col text-center">
+        <a href="https://github.com/philipcander" target="_blank" class="custom-link"><i class="fa-brands fa-github fa-2xl"></i></a>
+      </div>
+    </div>
+</div>
+
+<script>
+ function Datum() {
+    const div = document.querySelector("#date"),
+      year = new Date()
+        .getFullYear()
+        .toString();
+    div.innerHTML = year
+  }
+  Datum();
+</script>
+</body>
+
+</html>

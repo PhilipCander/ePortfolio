@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.sutNunjucksEnvironmentOptions({
+  eleventyConfig.setNunjucksEnvironmentOptions({
     throwOnUndefined: true,
-    autoescape: false,
+    autoescape: false, // warning: don’t do this!
   });
   eleventyConfig.setBrowserSyncConfig({
     notify: true,
@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
   // Passthrough
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("fontawesome");
 
   return {
     dir: {

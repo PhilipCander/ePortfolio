@@ -1,0 +1,25 @@
+<div class="container bg-body-tertiary rounded pt-4">
+  <p class="text-center ">Copyright © 2023 - <span id="date"></span> PEETAH. All rights reserved.</p>
+    <div class="row pb-4">
+      <div class="col text-center">
+        <a href="/Impressum" class="custom-link">Impressum</a>  
+      </div>
+      <div class="col text-center">
+        <a href="/Datenschutz" class="custom-link">Datenschutz</a>  
+      </div>
+      <div class="col text-center">
+        <a href="https://github.com/philipcander" target="_blank" class="custom-link"><i class="fa-brands fa-github fa-2xl"></i></a>
+      </div>
+    </div>
+</div>
+
+<script>
+ function Datum() {
+    const div = document.querySelector("#date"),
+      year = new Date()
+        .getFullYear()
+        .toString();
+    div.innerHTML = year
+  }
+  Datum();
+</script>
