@@ -1,0 +1,23 @@
+{
+  "name": "eportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch src/sass:dist/css",
+    "build:sass": "sass src/sass:dist/css --style=compressed",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "dev": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "bootstrap": "^5.3.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.70.0"
+  }
+}
