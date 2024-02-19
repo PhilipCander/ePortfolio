@@ -41,13 +41,14 @@ h2{
         display: none;
     }
 }
-.container2{
+.top {
     display: flex;
     flex-direction: column;
     justify-content:left;
     align-items: center;
+    color: #5fc75d;
 }
-.container {
+.block {
     display: flex;
     flex-direction: column;
     justify-content:left;
@@ -59,15 +60,15 @@ h2{
     border: #5fc75d 3px solid;
     padding: 10px;
 }
-.spacer1{
+.spacer1 {
     height: 10vw;
     width: max-content;
 }
-.spacer2{
+.spacer2 {
     height: 5vw;
     width: max-content;
 }
-.spacer3{
+.spacer3 {
     height: 2vw;
     width: max-content;
 }
