@@ -76,9 +76,16 @@ h2{
     display: flex;
     justify-content: space-evenly;
 }
+
+@media screen and (max-width: 768px) {
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .boxes img {
     min-width: 10rem;
-    max-width: 20rem;
+    max-width: 30rem;
     height: auto;
 }
 .title h1 {
@@ -138,4 +145,7 @@ la{
     padding: 0.5rem;
     color: #5fc75d;
     font-weight: bold;
+}
+li{
+    padding: 0.2rem;
 }
