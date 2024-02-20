@@ -72,6 +72,15 @@ h2{
     height: 2vw;
     width: max-content;
 }
+.boxes {
+    display: flex;
+    justify-content: space-evenly;
+}
+.boxes img {
+    min-width: 10rem;
+    max-width: 20rem;
+    height: auto;
+}
 .title h1 {
     color: #5fc75d;
     font-size: clamp(2vw, 5vw, 3rem);
@@ -121,4 +130,12 @@ a::after {
     left: 0;
     transition: right .4s cubic-bezier(0,.5,0,1),
     border-color .4s ease-out;
+}
+la{
+    display: list-item;
+    list-style-type: ">";
+    padding-inline-start: 0.5rem;
+    padding: 0.5rem;
+    color: #5fc75d;
+    font-weight: bold;
 }
