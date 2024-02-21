@@ -111,16 +111,17 @@ table img{
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .boxes {
         flex-direction: column;
         align-items: center;
     }
 }
 .boxes img {
-    min-width: 10rem;
+    min-width: 20rem;
     max-width: 30rem;
     height: auto;
+    object-fit: contain;
 }
 .title h1 {
     color: #5fc75d;
@@ -189,13 +190,16 @@ li{
     padding: 0.2rem;
 }
 #back-to-top {
-    display: none; /* Hide the button initially */
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #1f1f1f; /* Change this to the color you want */
-    color: #ffffff; /* Change this to the color you want */
+    background-color: #1f1f1f;
     cursor: pointer;
+    border: none;
+}
+#back-to-top:hover {
+    background-color: #5fc75d;
 }
