@@ -23,6 +23,17 @@ img{
     max-width: 800px;
     height: auto;
 }
+table{
+    color: #5fc75d;
+    border: 3px solid #5fc75d;
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    border: 3px solid #5fc75d;
+    padding: 15px;
+    text-align: left;
+}
 .sticky{
     position: sticky;
     position: -webkit-sticky;
