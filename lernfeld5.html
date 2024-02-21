@@ -42,6 +42,7 @@
                 <la><a href="#thementag6">Thementag 6 - Objektorientiertes modellieren - UML</a></la>
                 <ul>
                     <la><a href="#usecasedia">Use-case Diagramme</a></la>
+                    <la><a href="#aktivitaetsdia">Aktivitätsdiagramme</a></la>
                 </ul>
             </ul>
             <div class="spacer1"></div>
@@ -150,10 +151,10 @@
                 </h1>
             </center>
             <div class="spacer2"></div>
-            <h2 id="usecasedia">Use-case Diagramme</h2>
             <p>
                 Vorab eine Übersicht von Elementen, die in einem UML-Diagramm vorkommen können:
             </p>
+            <h2 id="usecasedia">Use-case Diagramme</h2>
             <table>
                 <tr>
                     <th>
@@ -241,6 +242,176 @@
                     </td>
                     <td>
                         A includes B, zwingendes Verwenden von Anwendungsfall A durch B
+                    </td>
+                </tr>
+            </table>
+            <div class="spacer2"></div>
+            <h2 id="aktivitaetsdia">Aktivitätsdiagramme</h2>
+            <table>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Syntax
+                    </th>
+                    <th>
+                        Beschreibung
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Aktivitätsknoten
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-aktivitaetsknoten.png" alt="Aktivitaetsknoten">
+                    </td>
+                    <td>
+                        Repräsentiert eine Aktion
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Initalknoten
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-initialknoten.png" alt="Initalknoten">
+                    </td>
+                    <td>
+                        Kennzeichnet den Start einer Aktivität
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Aktivitätsendknoten
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-aktivitaetsendknoten.png" alt="Aktivitaetsendknoten">
+                    </td>
+                    <td>
+                        Kennzeichnet das Ende einer Aktivität
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Entscheidungs- und Vereiniungsknoten
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-entscheidungsknoten.png" alt="Entscheidungsknoten">
+                    </td>
+                    <td>
+                        Aufspaltung und Zusammenführung von alternativen Abläufen
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Parallelisierungs- und Synchronisationsknoten
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-parallelisierungsknoten.png" alt="Parallelisierungsknoten">
+                    </td>
+                    <td>
+                        Aufspaltung und Zusammenführung von parallelen Abläufen
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ablaufend Knoten
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-ablaufendknoten.png" alt="Ablaufendknoten">
+                    </td>
+                    <td>
+                        Ende von EINEM Ablauf
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Transition
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-transition.png" alt="Transition">
+                    </td>
+                    <td>
+                        Verbindung der Knoten einer Aktivität
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Aktivitätsaufruf
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-aktivitaetsaufruf.png" alt="Aktivitaetsaufruf">
+                    </td>
+                    <td>
+                        Schachtelung von Aktivitäten
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Objektknoten, Pins
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-objektknoten.png" alt="Objektknoten">
+                    </td>
+                    <td>
+                        Beinhalten Daten und Objekte
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Partition
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-partition.png" alt="Partition">
+                    </td>
+                    <td>
+                        Asynchrones Ergebnis / Zeitergebnis
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Signal
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-signal.png" alt="Signal">
+                    </td>
+                    <td>
+                        Übermittlung eines Signals an einen anderen Empfänger
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Asynchrones Ereignis / Zeitergebnis
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-zeitergebnis.png" alt="Zeitergebnis">
+                    </td>
+                    <td>
+                        Warten auf ein Ergebnis bzw. einen Zeitpunkt
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Exception Handler
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-exceptionhandler.png" alt="Exceptionhandler">
+                    </td>
+                    <td>
+                        Aktivität wird bei Ausnahme ausgeführt
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Unterbrechungsbereich
+                    </td>
+                    <td>
+                        <img src="img/lf5-uml-unterbrechungsbereich.png" alt="Unterbrechungsbereich">
+                    </td>
+                    <td>
+                        Wird der Unterbrechungsbereich über die Unterbrechungskante verlassen, so werden
+                        alle in der Region vorhandenen Token gelöscht
                     </td>
                 </tr>
             </table>
