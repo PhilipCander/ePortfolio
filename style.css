@@ -34,6 +34,11 @@ th, td{
     padding: 15px;
     text-align: left;
 }
+table img{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
 .sticky{
     position: sticky;
     position: -webkit-sticky;
