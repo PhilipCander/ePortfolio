@@ -19,7 +19,7 @@ p{
     font-size: medium;
 }
 img{
-    width: 70%;
+    width: 80%;
     max-width: 800px;
     height: auto;
 }
@@ -27,12 +27,22 @@ table{
     color: #5fc75d;
     border: 3px solid #5fc75d;
     border-collapse: collapse;
-    width: 100%;
+    object-fit: contain;
+    padding: auto;
+    max-width: 40vw;
+    margin: auto;
 }
 th, td{
     border: 3px solid #5fc75d;
     padding: 15px;
     text-align: left;
+    font:bold;
+}
+th{
+    text-decoration: underline;
+}
+tr:nth-child(even) {
+    background-color: #1f1f1f;
 }
 table img{
     width: 100%;
@@ -60,6 +70,8 @@ table img{
     justify-content:left;
     align-items: center;
     color: #5fc75d;
+    max-width: 1000px;
+    margin: auto;
 }
 .block {
     display: flex;
@@ -70,9 +82,14 @@ table img{
     margin: auto;
     margin-bottom: 30px;
     color: #5fc75d;
-    border: #5fc75d 3px solid;
     padding: 10px;
     font: bold;
+}
+@media screen and (min-width: 1200px) {
+    .block {
+        border: #5fc75d 3px solid;
+    }
+    
 }
 .block h2{
     text-decoration: underline;
@@ -107,15 +124,20 @@ table img{
 }
 .title h1 {
     color: #5fc75d;
-    font-size: clamp(2vw, 5vw, 3rem);
-    padding-left: 10px;
-    max-width: 100%;
+    font-size: clamp(2vw, 5vw, 3vw);
+    width: 100%;
     overflow: hidden;
     border-right: .30em solid #5fc75d; 
     white-space: nowrap; 
     animation:
         typing 1.5s steps(25, end),
         blink-caret .5s step-end infinite;
+}
+@media screen and (max-width: 1200px) {
+    .title h1 {
+        font-size: clamp(2vw, 5vw, 8vw);
+    }
+    
 }
 .menu h2 {
     color: #5fc75d;
