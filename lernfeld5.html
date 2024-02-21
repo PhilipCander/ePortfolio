@@ -39,7 +39,7 @@
                     <la><a href="#funktionsbeschreibung">Funktionsbeschreibung</a></la>
                     <la><a href="#modell">Modell (Schaltplan)</a></la>
                     <la><a href="#quellcode">Quellcode</a></la>
-                    <la><a href="#quellcodebeschreibung">Quellcodebeschreibung</a></la>
+                    <la><a href="#struktogramm">Struktogramm</a></la>
                 </ul>
                 <la><a href="#thementag6">Thementag 6 - Objektorientiertes modellieren - UML</a></la>
                 <ul>
@@ -144,11 +144,11 @@
 #define LED2 5 //LED2 grün
 #define LED3 6 //LED3 blau
 #define LED4 7 //LED4 gelb
-
+                    
 //alle vier LEDs zu einem Array zusammenfassen
 //dieses ist für das Mapping später von Vorteil.
 int leds[] = {LED1, LED2, LED3, LED4};
-
+                    
 void setup() {
     //setzen der LEDs als Ausgang
     pinMode(LED1, OUTPUT);
@@ -156,29 +156,22 @@ void setup() {
     pinMode(LED3, OUTPUT);
     pinMode(LED4, OUTPUT);
 }
-
-void loop() {
-
-//Liest den Wert vom analogen Pin A0 ein. 
-//Die Arduino-Boards enthalten einen 10-Bit-Analog-zu-Digital-Konverter.
-//Das Board "mappt" Eingangsspannungen zwischen 0 und 5 V auf Integer-Werte zwischen 0 und 1023. 
-//Die erreichte Auflösung ist damit z.B. auf einem Arduino UNO bei 5 V / 1024 Teile 
-//oder 0,0049 V (4,9 mV) per Teil.
                     
-int value = analogRead(POTI);
-
-//mappen des Wertes vom Drehpotentiometers 
-//auf einen Wert zwischen 0 und 4.
-int led = map(value,0,1024,0,4);
-
-//zurücksetzen der LEDs
-resetLEDs();
-
-//aktivieren der LED
-digitalWrite(leds[led], HIGH);
-                    }
-
-//Funktion um die LEDs wieder zurück zu setzen.
+void loop() {
+    // Liest die Volt anzahl vom Pin A0 aus. (Die Volt anzahl wird durch ein Potentiometer eingestellt)
+    int value = analogRead(POTI);
+                    
+    // Mappt den Wert von 0-1024 auf 0-4 übersetzt vom Potentiometer auf die 4 LEDs
+    int led = map(value,0,1024,0,4);
+                    
+    // setzt die LEDs zurück bevor eine neue LED aktiviert wird.
+    resetLEDs();
+                    
+    // Aktiviert die LED die wir vorher gemappt haben.
+    digitalWrite(leds[led], HIGH);
+}
+                    
+// Hier ist die Funktion zu reseten (aus machen) der LEDs.
 void resetLEDs(){
     digitalWrite(LED1, LOW);
     digitalWrite(LED2, LOW);
@@ -188,11 +181,14 @@ void resetLEDs(){
                 </code>
             </pre>
             <div class="spacer2"></div>
-            <h2 id="quellcodebeschreibung">
-                Quellcodebeschreibung:
+            <h2 id="struktogramm">
+                Struktogramm:
             </h2>
+            <center>
+                <img src="img/lf5-klimabox-struktogramm.png" alt="Klimabox" style="width: auto; margin: auto;">
+            </center>
             <p>
-                ... kommt noch ...
+                kommt nocht ...
             </p>
             <div class="spacer1"></div>
             <center>
