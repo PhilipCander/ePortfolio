@@ -90,19 +90,65 @@ Die sieben Schichten des OSI-Modells sind:
             </center>
             <div class="spacer2"></div>
             <h2 id="offizielleAddr">Offizielle Adressenvergeber</h2>
+            <center>
+                <img src="img/lf3-netz-offizielleAddr.png" alt="offizielleAddressgeber">
+            </center>
             <p>
-                To be added...
+                Die Vergabe von IP-Adresse erfolgte damals durch die IANA (Internet Assigned Numbers Authority).
+                Jedoch heutzutage wird die Vergabe von IP-Adressen durch die RIRs (Regional Internet Registries)
+                durchgeführt.
             </p>
             <div class="spacer2"></div>
             <h2 id="ipv4">IPv4</h2>
+            <h3>
+                Wie ist eine IPv4-Adresse aufgebaut?
+            </h3>
             <p>
-                To be added...
+                IPv4-Adressen bestehen aus 32 Bit und werden in vier Oktetten zu je 8 Bit unterteilt.
+            </p>
+            <h3>
+                Als Beispiel:
+            </h3>
+            <pre>
+                <center>
+                    <h3>
+11000000    10101000    00000000    00000001
+192         168         0           1
+                    </h3>
+                </center>
+            </pre>
+            <p>
+                Jedes Oktett Repräsentiert eine Zahl von 0 bis 255, sodass mit den vier Oktetts theoretisch
+                über 4 Milliarden Adressen mögliche sind (Um genau zu sein: 4.294.967.296 Adressen).
+                Jedoch sind nicht alle Adressen verfügbar, da einige Adressen für spezielle Zwecke reserviert sind...
+                dazu später mehr.
+
             </p>
             <div class="spacer2"></div>
             <h2 id="ipv6">IPv6</h2>
             <p>
-                To be added...
+                Auch wenn es eigentlich 4 Milliarden Adressen gibt, so sind diese Adressen heute lang nicht mehr ausreichend.
+                Deshalb wurde IPv6 entwickelt, das 128 Bit lange Adressen verwendet. Das bedeutet, dass es 2^128 Adressen gibt,
+                was üngefähr 340 Sextillionen Adressen entspricht. Das ist eine unglaublich große Zahl und sollte für die
+                nächsten Jahrzehnte ausreichen.
             </p>
+            <h3>
+                Wie ist eine IPv6-Adresse aufgebaut?
+            </h3>
+            <p>
+                Eine IPv6-Adresse besteht aus 8 Blöcken zu je 16 Bit. Die Blöcke werden durch Doppelpunkte getrennt.
+            </p>
+            <h3>
+                Als Beispiel:
+            </h3>
+            <center>
+                <p>
+                    (Die binäre Darstellung der IPv6-Adresse wird hier nicht gezeigt, da es zu lang wäre.)
+                </p>
+                <p>
+                    2001:0db8:85a3:0000:0000:8a2e:0370:7334
+                </p>
+            </center>
             <div class="spacer2"></div>
             <h2 id="klasseABC">Klasse A, B und C Netze</h2>
             <p>
